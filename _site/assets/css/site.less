@@ -1,0 +1,132 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+
+@white:                 #ffffff;
+@changerBlue:           #00ade4;
+@gsaGreen:              #79ba36;
+@chimpOrange:           #e6471f;
+@catBlue:               @changerBlue;
+
+@border-radius-base:    0;
+@border-radius-large:   0;
+@border-radius-small:   0;
+
+@btn-font-weight:       300;
+@headings-font-weight:  300;
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+.well {
+  .box-shadow(none);
+}
+
+.brand-header {
+  color: @gray;
+  font-weight: 200;
+  padding: 40px 0;
+  font-size: 40px;
+  span {
+    font-weight: 600;
+    margin-right: 10px;
+  }
+}
+
+.csa-navbar-default {
+  .navbar-default;
+  background-color: @white;
+}
+
+.csa-navbar {
+  border-top: 1px solid @gray-lighter;
+  border-bottom: 1px solid @gray-lighter;
+  margin-bottom: 40px;
+}
+
+.navbar-nav {
+  li {
+    margin-right: 20px;
+    a {
+      padding-bottom: 16px;
+      border-bottom: 1px solid @chimpOrange;
+    }
+  }
+  li:first-child {
+    a {
+      border-bottom: 1px solid @gsaGreen;
+    }
+  }
+  li:last-child {
+    a {
+      border-bottom: 1px solid @catBlue;
+    }
+  }
+}
+
+.navbar-brand {
+  margin: 0 20px;
+}
+
+.nav-pills {
+  li {
+    a {
+      border-radius: 0;
+      color: @gray;
+    }
+    a:hover {
+      background-color: transparent;
+      border-left: 1px solid @gray;
+      margin-left: -1px;
+    }
+  }
+  li.active {
+    a {
+      background-color: transparent;
+      color: @gray;
+      border-left: 1px solid @gray;
+      margin-left: -1px;
+    }
+    a:hover {
+      background-color: transparent;
+      color: @gray;
+    }
+  }
+}
+
+.brief {
+  margin-top: 30px;
+  text-align: center;
+  .well {
+    border-top: 1px solid @chimpOrange;
+    min-height: 270px;
+  }
+  :first-child {
+    .well {
+      border-top: 1px solid @gsaGreen;
+    }
+  }
+  :last-child {
+    .well {
+      border-top: 1px solid @catBlue;
+    }
+  }
+}
+
+.gsa-well {
+  .well;
+  border-top-color: @gsaGreen;
+  min-height: 340px;
+  background-color: transparent;
+}
+
+.affix {
+  margin-top: -200px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .affix {
+    position: absolute;
+  }
+}
+
